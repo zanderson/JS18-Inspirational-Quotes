@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="quoteApp">
+<head>
+	<title>Inspirational Quotes - JS18</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+	<script type="text/javascript" src="javascript.js"></script>
+</head>
+<body ng-controller="quoteController">
+<h1>Inspirational Quotes</h1>
+<h2>Read, share and feel better!</h2>
+<p>Phish gifting circle saturn return peace mayan calendar root chakra, craniosacral midwifery. Closing circle trust the process ancient, on the playa tofurkey. The healing properties of henna tattoo optimal frequency tantra, feeling triggered harmful electromagnetic fields. Planetary transition stable energy fields carob, blue whale Harbin non-profit. Namaste.</p>
+
+<div class="inspiration">
+	<h3>Need inspiration?</h3>
+	<button class="randomquote" ng-click="showIt()">Click for a quote!</button>
+</div>
+<center>
+<div class="popup1" ng-show="popup">
+	<h2>Quote of the Day:</h2>
+	<p> 
+	<span class="quotePop">{{randomQuote.quote}}</span><br />
+	<span class="authPop">- {{randomQuote.author}}</span>
+	</p>
+	<button ng-click="showIt()">Close</button>
+</div>
+</center>
+
+
+<h3>Share your favorite quote!</h3>
+<div>
+<form name="myForm">
+	<p class="form">Author<sup>*</sup> : <input class="inputbox" ng-model="author" required type="text" name="author"></p>
+	<span ng-show="myForm.author.$touched && myForm.author.$invalid">The author name is required.</span>
+	<p class="form">Quote<sup>*</sup> : <input class="inputbox" ng-model="quote" type="text" name="quote"></p>
+	<span ng-show="myForm.quote.$touched && myForm.quote.$invalid">Quote is required.</span>
+		<button class="submit" ng-click="addQuote()">SUBMIT</button>
+</form>
+<br />
+<h3>Quotes</h3>
+<ul>
+	<li ng-click="quotesFromP()" ng-repeat="quote in quotes | orderBy:'-rating'">{{quote.author}} - {{quote.quote}}
+		<div class="rate">
+    		<div ng-click="rateIt(1, quote)" ng-class="quote.rating >= 1 ? 'rated' : 'rate-item'">&#9733;</div>
+	    	<div ng-click="rateIt(2, quote)" ng-class="quote.rating >= 2 ? 'rated' : 'rate-item'">&#9733;</div>
+	    	<div ng-click="rateIt(3, quote)" ng-class="quote.rating >= 3 ? 'rated' : 'rate-item'">&#9733;</div>
+	    	<div ng-click="rateIt(4, quote)" ng-class="quote.rating >= 4 ? 'rated' : 'rate-item'">&#9733;</div>
+	    	<div ng-click="rateIt(5, quote)" ng-class="quote.rating >= 5 ? 'rated' : 'rate-item'">&#9733;</div>
+	    	<div style="clear: both;"></div>
+		</div>
+	</li>
+
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+p {
+	font-size: 18px;
+}
+
+.required,  span{
+	font-size: 12px;
+	font-style: italic;
+	color: red;
+}
+
+.submit{
+	background-color: lightblue;
+	color: white;
+	font-size: 14px;
+	width: 200px;
+	height:40px;
+	border: 0 none;
+	margin-top: 20px;
+	border: 0.5px solid gray;
+	margin-left: 20px;
+}
+
+.form {
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+
+}
+
+.inputbox {
+	width: 400px;
+	height: 30px;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+ul{
+	list-style: none;
+}
+
+.rate{
+    color: #e6e7e7;
+    cursor:pointer;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.rate:hover{
+    color: lightblue;
+}
+
+.rate-item{
+    float:left;
+    cursor:pointer;
+    margin:0px 15px 0px 15px;
+
+}
+.rate-item:hover ~ .rate-item {
+    color: #e6e7e7;
+}
+.rated{
+	color: lightblue;
+	float:left;
+    cursor:pointer;
+    margin:0px 15px 0px 15px;
+}
+
+.randomquote{
+	width: 150px;
+	height: 30px;
+	border: 0 none;
+	background-color: lilac;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.inspiration {
+	padding-left: 20px;
+}
+
+.popup1{
+	width: 350px;
+	height: 100%;
+	background-color: lightgray;
+	border: none;
+	padding: 10px;
+	color: white;
+	vertical-align: center;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+h2 {
+	color: gray;
+}
+
+.authPop {
+	font-style: italic;
+	color: white;
+	font-size: 14px;
+}
+
+.quotePop {
+	color: white;
+	font-style: normal;
+	font-size: 14px;
+}
